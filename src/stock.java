@@ -36,8 +36,10 @@ public class stock {
 
 
 
+
+
     private void actualizarDisponibilidad() {
-        this.disponibilidad = (this.cantidadStock > 0);
+        this.disponibilidad = (this.cantidadStock > 0); // si es verdadero es que esta disponible aunque podria necesitar reposicion
     }
 
 
@@ -57,8 +59,10 @@ public class stock {
         return false;
     }
 
+
+
     public boolean necesitaReposicion() {
-        return this.cantidadStock <= this.alertaBajoStock;
+        return this.cantidadStock <= this.alertaBajoStock; // si es true necesita reposicion
     }
 
 
@@ -73,7 +77,7 @@ public class stock {
     }
 
     public String cantidadDisponible(){
-        return "LA CANTIDAD QUE QUEDA DEL PRODUCTO ES DE" +cantidadStock;
+        return "LA CANTIDAD QUE QUEDA DEL PRODUCTO ES DE\n" +cantidadStock;
     }
 
 
