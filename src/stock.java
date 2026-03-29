@@ -1,7 +1,7 @@
 public class stock {
-    private int cantidadStock;
-    private int alertaBajoStock;
-    private boolean disponibilidad;
+    protected int cantidadStock;
+    protected int alertaBajoStock;
+    protected boolean disponibilidad;
 
     public stock(int cantidadStock, int alertaBajoStock, boolean disponibilidad) {
         this.cantidadStock = cantidadStock;
