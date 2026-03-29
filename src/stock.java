@@ -33,4 +33,51 @@ public class stock {
     public void setDisponibilidad(boolean disponibilidad) {
         this.disponibilidad = disponibilidad;
     }
+
+
+
+    private void actualizarDisponibilidad() {
+        this.disponibilidad = (this.cantidadStock > 0);
+    }
+
+
+    public void aumentarStock(int cantidad) {
+        if (cantidad > 0) {
+            this.cantidadStock += cantidad;
+            actualizarDisponibilidad();
+        }
+    }
+
+    public boolean disminuirStock(int cantidad) {
+        if (cantidad > 0 && this.cantidadStock >= cantidad) {
+            this.cantidadStock -= cantidad;
+            actualizarDisponibilidad();
+            return true;
+        }
+        return false;
+    }
+
+    public boolean necesitaReposicion() {
+        return this.cantidadStock <= this.alertaBajoStock;
+    }
+
+
+    public String obtenerEstadoVisual() {
+        if (this.cantidadStock == 0) {
+            return "AGOTADO\n";
+        } else if (necesitaReposicion()) {
+            return "STOCK CRÍTICO\n";
+        } else {
+            return "DISPONIBLE\n";
+        }
+    }
+
+    public String cantidadDisponible(){
+        return "LA CANTIDAD QUE QUEDA DEL PRODUCTO ES DE" +cantidadStock;
+    }
+
+
+
+
+
 }

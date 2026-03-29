@@ -33,4 +33,6 @@ public class reporte{
     public void setReporteMovimStock(int reporteMovimStock) {
         this.reporteMovimStock = reporteMovimStock;
     }
+
+
 }
