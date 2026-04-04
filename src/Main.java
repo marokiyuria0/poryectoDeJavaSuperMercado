@@ -17,19 +17,26 @@ public class Main {
             system.out.println("6. CERRAR PROGRAMA.\n");
             opcion = leer.nextInt();
 
-            switch(opcion){
-                case 1: menuAgregar(); break;
-                case 2: menuEliminar(); break;
-                case 3: menuRegistrosOventas(); break;
-                case 4: menuProcesarVentas(); break;
-                case 5: menuGestionProducto(); break;
-                case 6: System.out.println("CERRANDO PROGRAMA...."); break;
-                default: System.out.println("OPCION NO VALIDA\n\n");
+            switch(opcion) {
+                case 1:
+                    menuAgregar v1 = new menuAgregar(); v1.ejecutar(); break;
+                case 2:
+                    menuEliminar v2 = new menuEliminar(); v2.ejecutar(); break;
+                case 3:
+                    menuRegistrosOventas v3 = new menuRegistrosOventas(); v3.ejecutar(); break;
+                case 4:
+                    menuProcesarVentas v4 = new menuProcesarVentas(); v4.ejecutar(); break;
+                case 5:
+                    menuGestionProducto v5 = new menuGestionProducto(); v5.ejecutar(); break;
+                case 6:
+                    System.out.println("CERRANDO PROGRAMA...."); break;
+                default:
+                    System.out.println("OPCION NO VALIDA\n\n");
             }
 
 
         } while(opcion != 6);
-        System.out.println("PROGRAMA CERRADO....");
-        System.exit(0);
+        system.out.println("PROGRAMA CERRADO....");
+        system.exit(0);
     }
 }
