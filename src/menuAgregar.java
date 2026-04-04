@@ -50,10 +50,7 @@ public class menuAgregar {
                         System.out.println("Peso (kg):");
                         double pesoCarne = leer.nextDouble();
 
-                        System.out.println("Fecha vencimiento:");
-                        String fechaCarne = leer.next();
-
-                        Inventario.lista.add(new ProductoCarne(codigo, nombreP, precio, tipoCarne, pesoCarne, fechaCarne));
+                        Inventario.lista.add(new ProductoCarne(codigo, nombreP, precio, tipoCarne, pesoCarne));
                         break;
 
                     case 2: // BEBESTIBLE
@@ -63,10 +60,7 @@ public class menuAgregar {
                         System.out.println("Es alcoholico? (true/false):");
                         boolean alcohol = leer.nextBoolean();
 
-                        System.out.println("Fecha vencimiento:");
-                        String fechaBebida = leer.next();
-
-                        Inventario.lista.add(new ProductoBebestible(codigo, nombreP, precio, ml, alcohol, fechaBebida));
+                        Inventario.lista.add(new ProductoBebestible(codigo, nombreP, precio, ml, alcohol));
                         break;
 
                     case 3: // LIMPIEZA
@@ -89,26 +83,17 @@ public class menuAgregar {
                         System.out.println("Peso (kg):");
                         double pesoVegetal = leer.nextDouble();
 
-                        System.out.println("Fecha vencimiento:");
-                        String fechaVegetal = leer.next();
-
-                        Inventario.lista.add(new ProductoVegetal(codigo, nombreP, precio, tipoVegetal, pesoVegetal, fechaVegetal));
+                        Inventario.lista.add(new ProductoVegetal(codigo, nombreP, precio, tipoVegetal, pesoVegetal));
                         break;
 
                     case 5: // COMESTIBLE
                         System.out.println("Tipo:");
                         String tipoComestible = leer.next();
 
-                        System.out.println("Fecha vencimiento:");
-                        String fechaCom = leer.next();
-
                         System.out.println("Peso:");
                         double pesoCom = leer.nextDouble();
 
-                        System.out.println("Es envasado? (true/false):");
-                        boolean envasado = leer.nextBoolean();
-
-                        Inventario.lista.add(new ProductoComestible(codigo, nombreP, precio, tipoComestible, fechaCom, pesoCom, envasado));
+                        Inventario.lista.add(new ProductoComestible(codigo, nombreP, precio, tipoComestible, pesoCom));
                         break;
                 }
 
