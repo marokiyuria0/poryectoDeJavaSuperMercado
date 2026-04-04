@@ -15,6 +15,11 @@ public class Main {
             system.out.println("4. PROCESAR VENTAS.\n");
             system.out.println("5. GESTIONAR PRODUCTO.\n");
             system.out.println("6. CERRAR PROGRAMA.\n");
+
+            while (!leer.hasNextInt()) {
+                System.out.println("Error: ingrese un número válido.");
+                leer.next();
+
             opcion = leer.nextInt();
 
             switch(opcion) {
