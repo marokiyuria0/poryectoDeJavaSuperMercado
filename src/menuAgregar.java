@@ -8,8 +8,8 @@ public class menuAgregar {
         int opcion;
 
         do{
-            System.out.println("====================================");
-            System.out.println("MENU PARA AGREGAR PRODUCTO");
+            System.out.println("====================================\n");
+            System.out.println("MENU PARA AGREGAR PRODUCTO\n");
             System.out.println("====================================\n");
 
             System.out.println("1. Carne");
