@@ -3,8 +3,8 @@ public class ProductoBebestible extends ClaseProducto {
     private int mililitros;
     private boolean esAlcoholico;
 
-    public ProductoBebestible(String codigo, String nombre, double precio, int mililitros, boolean esAlcoholico){
-        super(codigo, nombre, precio);
+    public ProductoBebestible(String codigo, String nombre, double precio, int mililitros, boolean esAlcoholico, String fechaVencimiento, Stock stoks){
+        super(codigo, nombre, precio,stoks,fechaVencimiento);
         this.mililitros = mililitros;
         this.esAlcoholico = esAlcoholico;
     }

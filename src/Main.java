@@ -19,7 +19,7 @@ public class Main {
 
             switch(opcion) {
                 case 1:
-                    menuAgregar v1 = new menuAgregar();
+                    MenuAgregar v1 = new MenuAgregar();
                     v1.ejecutarAgregar();
                     break;
                 case 2:
@@ -31,7 +31,7 @@ public class Main {
                     v4.ejecutar();
                     break;
                 case 4:
-                    menuGestionar v5 = new menuGestionar();
+                    MenuGestionar v5 = new MenuGestionar();
                     v5.ejecutarGestion();
                     break;
                 case 5:

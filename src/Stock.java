@@ -1,9 +1,9 @@
-public class stock {
+public class Stock {
     protected int cantidadStock;
-    protected int alertaBajoStock;
+    protected int alertaBajoStock; //Revisar (protected) para ver cambios hacia private
     protected boolean disponibilidad;
 
-    public stock(int cantidadStock, int alertaBajoStock, boolean disponibilidad) {
+    public Stock(int cantidadStock, int alertaBajoStock, boolean disponibilidad) {
         this.cantidadStock = cantidadStock;
         this.alertaBajoStock = alertaBajoStock;
         this.disponibilidad = disponibilidad;

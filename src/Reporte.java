@@ -1,10 +1,10 @@
-public class reporte{
+public class Reporte {
 
     protected int reporteSeccion;
     protected int reporteProveedor;
     protected int reporteMovimStock;
 
-    public reporte(int reporteSeccion, int reporteProveedor, int reporteMovimStock) {
+    public Reporte(int reporteSeccion, int reporteProveedor, int reporteMovimStock) {
         this.reporteSeccion = reporteSeccion;
         this.reporteProveedor = reporteProveedor;
         this.reporteMovimStock = reporteMovimStock;

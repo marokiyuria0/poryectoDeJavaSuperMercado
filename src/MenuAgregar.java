@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class menuAgregar {
+public class MenuAgregar {
 
     public static void ejecutarAgregar(){
 
@@ -60,7 +60,13 @@ public class menuAgregar {
                         System.out.println("Es alcoholico? (true/false):");
                         boolean alcohol = leer.nextBoolean();
 
-                        Inventario.lista.add(new ProductoBebestible(codigo, nombreP, precio, ml, alcohol));
+                        System.out.println("Fecha de Vencimiento:");
+                        String fechaCaducidad = leer.nextLine();
+
+                        System.out.println("Cantidad de Bebida:");
+                        Stock stocks =
+
+                        Inventario.lista.add(new ProductoBebestible(codigo, nombreP, precio, ml, alcohol, fechaCaducidad));
                         break;
 
                     case 3: // LIMPIEZA

@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class menuGestionar {
+public class MenuGestionar {
     public static void ejecutarGestion(){
 
         Scanner leer = new Scanner(System.in);
