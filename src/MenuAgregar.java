@@ -64,7 +64,7 @@ public class MenuAgregar {
                         String fechaCaducidad = leer.nextLine();
 
                         System.out.println("Cantidad de Bebida:");
-                        Stock stocks = (cantidadDo);
+                        Stock stocks = (cantidaadDo);
 
                         Inventario.lista.add(new ProductoBebestible(codigo, nombreP, precio, ml, alcohol, fechaCaducidad));
                         break;
