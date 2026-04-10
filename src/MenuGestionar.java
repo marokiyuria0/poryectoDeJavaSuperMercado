@@ -47,8 +47,13 @@ public class MenuGestionar {
         System.out.println("\n PRECIO DEL PRODUCTO : " + Inventario.lista.get(indiceProducto).getPrecio());
         System.out.println("\nCANTIDAD DE STOCK DEL PRODUCTO: "+ Inventario.lista.get(indiceProducto).getStock().getCantidadStock());
 
-
-
+        System.out.println("\n\nGESTION DE PRODUCTO\n\n");
+        System.out.println("1.MODIFICAR PRECIO\n");
+        System.out.println("2.MODIFICAR STOCK\n");
+        System.out.println("3.ELIMINAR PRODUCTO \n");
 
     }
+
+
+
 }
