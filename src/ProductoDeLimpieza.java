@@ -1,11 +1,11 @@
-public class ProductoDeLimpieza extends ClaseProducto {
+public class ProductoDeLimpieza extends Producto {
 
-    private String tipo; // detergente, cloro, desinfectante, etc.
-    private int contenido; // en ml
+    private String tipo;
+    private int contenido;
     private boolean esToxico;
 
-    public ProductoDeLimpieza(String codigo, String nombre, double precio, String tipo, int contenido, boolean esToxico){
-        super(codigo, nombre, precio);
+    public ProductoDeLimpieza(String codigo, String nombre, double precio, Stock stocks, String fechaCaducidad, String tipo, int contenido, boolean esToxico) {
+        super(codigo, nombre, precio, stocks, fechaCaducidad);
         this.tipo = tipo;
         this.contenido = contenido;
         this.esToxico = esToxico;

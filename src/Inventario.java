@@ -1,5 +1,5 @@
 import java.util.ArrayList;
 
 public class Inventario {
-    public static ArrayList<ClaseProducto> lista = new ArrayList<>();
+    public static ArrayList<Producto> lista = new ArrayList<>();
 }

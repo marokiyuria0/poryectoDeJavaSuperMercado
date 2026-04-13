@@ -1,4 +1,4 @@
-public class ProductoBebestible extends ClaseProducto {
+public class ProductoBebestible extends Producto {
 
     private int mililitros;
     private boolean esAlcoholico;

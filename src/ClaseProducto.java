@@ -1,4 +1,4 @@
-public class ClaseProducto {
+public class Producto {
 
     private String codigo;
     private String nombre;
@@ -7,7 +7,7 @@ public class ClaseProducto {
     private String fechaCaducidad;
 
     // constructor
-    public ClaseProducto(String codigo, String nombre, double precio, Stock stocks, String fechaCaducidad) {
+    public Producto(String codigo, String nombre, double precio, Stock stocks, String fechaCaducidad) {
         this.codigo = codigo;
         this.nombre = nombre;
         this.precio = precio;

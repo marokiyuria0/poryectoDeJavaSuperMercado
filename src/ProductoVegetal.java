@@ -1,10 +1,11 @@
-public class ProductoVegetal extends ClaseProducto {
+public class ProductoVegetal extends Producto {
 
     private String tipo; // fruta o verdura
     private double peso; // en kilos
 
-    public ProductoVegetal(String codigo, String nombre, double precio, String tipo, double peso){
-        super(codigo, nombre, precio);
+    public ProductoVegetal(String codigo, String nombre, double precio, Stock stocks,
+                           String fechaCaducidad, String tipo, double peso) {
+        super(codigo, nombre, precio, stocks, fechaCaducidad);
         this.tipo = tipo;
         this.peso = peso;
     }

@@ -19,9 +19,9 @@ public class Main {
 
             switch(opcion) {
                 case 1:
-                    MenuAgregar v1 = new MenuAgregar();
-                    v1.ejecutarAgregar();
+                    MenuAgregar.ejecutarAgregar();
                     break;
+/*
                 case 2:
                     menuRegistrosOventas v3 = new menuRegistrosOventas();
                     v3.ejecutar();
@@ -34,6 +34,8 @@ public class Main {
                     MenuGestionar v5 = new MenuGestionar();
                     v5.ejecutarGestion();
                     break;
+
+ */
                 case 5:
                     System.out.println("CERRANDO PROGRAMA....");
                     break;

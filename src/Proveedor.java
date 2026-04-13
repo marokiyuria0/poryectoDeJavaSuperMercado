@@ -1,13 +1,13 @@
 import java.util.ArrayList;
 
-public class ClaseProveedor {
+public class Proveedor {
     private String rut;
     private String nombre;
     private String numeroTelefono;
-    private ArrayList<ClaseProducto> listaproducto; // lista para agregar a producto
+    private ArrayList<Producto> listaproducto; // lista para agregar a producto
 
     //constructor
-    public ClaseProveedor(String rut, String nombre, String numeroTelefono){
+    public Proveedor(String rut, String nombre, String numeroTelefono){
         this.rut = rut;
         this.nombre = nombre;
         this.numeroTelefono = numeroTelefono;
@@ -27,7 +27,7 @@ public class ClaseProveedor {
         return numeroTelefono;
     }
 
-    public ArrayList<ClaseProducto> getListaproducto() {
+    public ArrayList<Producto> getListaproducto() {
         return listaproducto;
     }
 
@@ -44,7 +44,7 @@ public class ClaseProveedor {
         this.numeroTelefono = numeroTelefono;
     }
 
-    public void setListaproducto(ArrayList<ClaseProducto> listaproducto) {
+    public void setListaproducto(ArrayList<Producto> listaproducto) {
         this.listaproducto = listaproducto;
     }
 
@@ -59,7 +59,7 @@ public class ClaseProveedor {
         System.out.println("Productos asociados: "+ listaproducto.size());
     }
 
-    public void asociarProducto(ClaseProducto producto){
+    public void asociarProducto(Producto producto){
         listaproducto.add(producto);
         System.out.println("Producto: "+producto.getNombre() +" asociando al proveedor: "+nombre);
     }
