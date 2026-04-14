@@ -1,14 +1,15 @@
 public class Stock {
-    private int cantidadStock;       //
-    private int alertaBajoStock;     //
-    private boolean disponibilidad;  //
-
+    // Se crean atributos de stock
+    private int cantidadStock;
+    private int alertaBajoStock;
+    private boolean disponibilidad;
+    // Contructor de stock
     public Stock(int cantidadStock, int alertaBajoStock, boolean disponibilidad) {
         this.cantidadStock = cantidadStock;
         this.alertaBajoStock = alertaBajoStock;
         this.disponibilidad = disponibilidad;
     }
-
+    //getters y setters de atributos
     public int getCantidadStock() {
         return cantidadStock;
     }
