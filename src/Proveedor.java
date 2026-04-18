@@ -1,20 +1,22 @@
-import java.util.ArrayList;
+// clase que representa a los proveedores los cuales tienen como atributos rut, nombre, etc. ademas los productos se asocian a este proveedor
+import java.util.ArrayList; // Se importan los array list para manejar listas dinamicas
 
 public class Proveedor {
+    //Se crean atributos para la clase
     private String rut;
     private String nombre;
     private String numeroTelefono;
-    private ArrayList<Producto> listaproducto; // lista para agregar a producto
+    private ArrayList<Producto> listaproducto;
 
-    //constructor
+    //Constructor de la clase proveedor
     public Proveedor(String rut, String nombre, String numeroTelefono){
         this.rut = rut;
         this.nombre = nombre;
         this.numeroTelefono = numeroTelefono;
-        this.listaproducto = new ArrayList<>();
+        this.listaproducto = new ArrayList<>(); //inicializa la lista vacia de productos y los otros atributos
     }
 
-    //getters
+    //Getters obtener o conseguir los valores
     public String getRut(){
         return rut;
     }
@@ -31,7 +33,7 @@ public class Proveedor {
         return listaproducto;
     }
 
-    //setters
+    //Setters que se usan para modiciar los valores
     public void setRut(String rut){
         this.rut = rut;
     }
@@ -48,20 +50,16 @@ public class Proveedor {
         this.listaproducto = listaproducto;
     }
 
-
-    //metodos
-    public void registrar(){
-        System.out.println("Proveedor registrado: "+ nombre + " | rut: "+ rut);
-    }
+    //Metodos
 
     public void listar(){
-        System.out.println("Proveedor registrado: "+ nombre + " | rut: "+ rut + " | numero de telefono: "+ numeroTelefono);
-        System.out.println("Productos asociados: "+ listaproducto.size());
+        System.out.println("Proveedor registrado: "+ nombre + " | rut: "+ rut + " | numero de telefono: "+ numeroTelefono);  // se imprimen los datos del proveedor
+        System.out.println("Productos asociados: "+ listaproducto.size()); // Muestra la cantidad de productos asociados al proveedor
     }
 
-    public void asociarProducto(Producto producto){
-        listaproducto.add(producto);
-        System.out.println("Producto: "+producto.getNombre() +" asociando al proveedor: "+nombre);
+    public void asociarProducto(Producto unProducto){
+        listaproducto.add(unProducto); // Se agrega un producto a la lisa
+        System.out.println("Producto: "+unProducto.getNombre() +" asociando al proveedor: "+nombre); //Se imprime un mensaje del producto agregado o asociado al proveedor
     }
 
 }

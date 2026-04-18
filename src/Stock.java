@@ -1,3 +1,4 @@
+//clase la cual se tendrán los atributos necesarios para gestionar el stock de cada cosa
 public class Stock {
     // Se crean atributos de stock
     private int cantidadStock;
@@ -18,7 +19,7 @@ public class Stock {
         return alertaBajoStock;
     }
 
-    public boolean isDisponibilidad() {
+    public boolean getDisponibilidad() {
         return disponibilidad;
     }
 
@@ -39,26 +40,29 @@ public class Stock {
         this.disponibilidad = (this.cantidadStock > 0);
     }
 
-    public void aumentarStock(int cantidad) {
+    //SOBRECARGA
+    public void modificarStock(int cantidad) { // aumenta el stock
         if (cantidad > 0) {
             this.cantidadStock += cantidad;
             actualizarDisponibilidad();
         }
     }
 
-    public boolean disminuirStock(int cantidad) {
-        if (cantidad > 0 && this.cantidadStock >= cantidad) {
-            this.cantidadStock -= cantidad;
-            actualizarDisponibilidad();
-            return true;
+    //SOBRECARGA
+    public boolean modificarStock(int cantidad, String motivo) { // baja stock con motivo del porque se bajo
+        int nuevoStock = this.cantidadStock - cantidad;
+        if (nuevoStock < 0) {
+            return false;
         }
-        return false;
+        this.cantidadStock = nuevoStock;
+        actualizarDisponibilidad();
+        System.out.println("Movimiento: " + motivo);
+        return true;
     }
 
     public boolean necesitaReposicion() {
         return this.cantidadStock <= this.alertaBajoStock;
     }
-
     public String obtenerEstadoVisual() {
         if (this.cantidadStock == 0) {
             return "AGOTADO";
@@ -69,7 +73,4 @@ public class Stock {
         }
     }
 
-    public String cantidadDisponible() {
-        return "LA CANTIDAD QUE QUEDA DEL PRODUCTO ES DE " + cantidadStock;
-    }
 }
